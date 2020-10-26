@@ -1,3 +1,9 @@
+// When Generate Password button is clicked, the first prompt should appear. 
+function startPrompt(){
+  var numberOfCharacters = prompt("How many characters would you like your password to contain?");
+}
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
