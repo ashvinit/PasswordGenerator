@@ -17,10 +17,8 @@ function startPrompt(){
   //Ask user how many characters they would like their passowrd to contain
   var numberOfCharacters = prompt("How many characters would you like your password to contain? (Password must be 8 - 128 characters long)");
 
-  console.log(numberOfCharacters);
-
   //password length must be between 8-128 characters
-      if (numberOfCharacters < 8 || numberOfCharacters > 128) { 
+      while (numberOfCharacters < 8 || numberOfCharacters > 128) { 
         
         //alert the user the condition and ask the prompt again
         alert("PASSWORD MUST BE 8-128 CHARACTERS LONG!");
