@@ -1,15 +1,14 @@
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
+  passwordText.value = password;
 
-// }
+
 
 //List of Arrays
 var uppercaseLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
@@ -27,8 +26,8 @@ var characters = [];
 var password = [];
 
 
-// When Generate Password button is clicked, the first prompt should appear. 
-function startPrompt(){
+// // When Generate Password button is clicked, the first prompt should appear. 
+// function startPrompt(){
 
   //Ask user how many characters they would like their passowrd to contain
   var numberOfCharacters = prompt("How many characters would you like your password to contain? (Password must be 8 - 128 characters long)");
@@ -79,13 +78,14 @@ for (var i = 0; i < numberOfCharacters; i++) {
 
   password += characters[Math.floor(Math.random() * characters.length)];
 
-  console.log(password);
+  
 
 }
 
+password == writePassword;
+
+
 }
 
-
-
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
