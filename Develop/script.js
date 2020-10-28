@@ -64,9 +64,7 @@ var characters = [];
     //for loop for generating password
 for (var i = 0; i < numberOfCharacters; i++ ) {
     var randomArray = characters[Math.floor(Math.random() * characters.length)];
-    password += randomArray[Math.floor(Math.random())];
-    // console.log(password);
-
+    password += randomArray[Math.floor(Math.random() * randomArray.length)];
   }
 
 
