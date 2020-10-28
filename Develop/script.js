@@ -7,7 +7,10 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+}
 
+//start when button is clicked
+function createPassword () {
 
 
 //List of Arrays
@@ -39,37 +42,27 @@ var password = [];
         alert("PASSWORD MUST BE 8-128 CHARACTERS LONG!");
         
         numberOfCharacters = prompt("How many characters would you like your password to contain? (Password must be 8 - 128 characters long)");
+
+        generatePassword();
   }
   
-  //Confirm including special characters
-  var specialCharacters = confirm("Click OK to confirm including special characters");
-
     //if user hits OK, add symbols array to characters array
-    if (specialCharacters == true) {
-      characters.concat(symbols);
+    if (confirm("Click OK to confirm including special characters")) {
+      characters.push(symbols);
     }
 
-  //Confirm including numeric characters
-  var numericCharacters = confirm("Click OK to confirm including numeric characters");
-
     //if user hits OK, add numbers to characters array
-    if (numericCharacters == true) {
+    if (confirm("Click OK to confirm including numeric characters")) {
       characters.concat(numbers);
     }
 
-  //Confirm including lowercase characters
-  var lowercaseCharacters = confirm("Click OK to confirm including lowercase letters");
-
     //if user hits OK, add lowecaseLetters to character array
-    if (lowercaseCharacters == true) {
+    if (confirm("Click OK to confirm including lowercase letters")) {
       characters.concat(lowercaseLetters);
     }
 
-  //Confirm including uppercase characters
-  var uppercaseCharacters = confirm("Click OK to confirm including uppercase letters");
-
     //if user hits OK, add uppercaseLetters to character array
-    if (uppercaseCharacters == true) {
+    if (onfirm("Click OK to confirm including uppercase letters")) {
       characters.concat(uppercaseLetters);
     }
 
@@ -78,12 +71,9 @@ for (var i = 0; i < numberOfCharacters; i++) {
 
   password += characters[Math.floor(Math.random() * characters.length)];
 
-  
-
 }
 
-password == writePassword;
-
+return password;
 
 }
 
