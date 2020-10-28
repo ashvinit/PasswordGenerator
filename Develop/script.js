@@ -11,13 +11,23 @@ var generateBtn = document.querySelector("#generate");
 
 // }
 
+//List of Arrays
+var uppercaseLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+var lowecaseLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+var numbers = [0,1,2,3,4,5,6,7,8,9];
+
+var symbols = ['!', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '[','{', ']', '}', '|', ';', ':', '<', ',', '>', '.', '?', '~', '`'];
+
+
 // When Generate Password button is clicked, the first prompt should appear. 
 function startPrompt(){
 
   //Ask user how many characters they would like their passowrd to contain
   var numberOfCharacters = prompt("How many characters would you like your password to contain? (Password must be 8 - 128 characters long)");
 
-  //password length must be between 8-128 characters
+  //check to see if answer meets condition; if not it will repeat the question
       while (numberOfCharacters < 8 || numberOfCharacters > 128) { 
         
         //alert the user the condition and ask the prompt again
