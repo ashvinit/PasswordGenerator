@@ -24,7 +24,7 @@ var symbols = ['!', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', 
 var characters = [];
 
 //empty array for the password
-// var password = [];
+var password = [];
 
 
 // When Generate Password button is clicked, the first prompt should appear. 
@@ -77,7 +77,7 @@ function startPrompt(){
     //for loop for generating password
 for (var i = 0; i < numberOfCharacters; i++) {
 
-  var password = characters[Math.floor(Math.random() * characters.length)];
+  password += characters[Math.floor(Math.random() * characters.length)];
 
   console.log(password);
 
