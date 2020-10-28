@@ -10,7 +10,7 @@ function writePassword() {
 }
 
 //start when button is clicked
-function createPassword () {
+function generatePassword () {
 
 
 //List of Arrays
@@ -43,7 +43,7 @@ var password = [];
         
         numberOfCharacters = prompt("How many characters would you like your password to contain? (Password must be 8 - 128 characters long)");
 
-        generatePassword();
+        writePassword();
   }
   
     //if user hits OK, add symbols array to characters array
@@ -53,17 +53,17 @@ var password = [];
 
     //if user hits OK, add numbers to characters array
     if (confirm("Click OK to confirm including numeric characters")) {
-      characters.concat(numbers);
+      characters.push(numbers);
     }
 
     //if user hits OK, add lowecaseLetters to character array
     if (confirm("Click OK to confirm including lowercase letters")) {
-      characters.concat(lowercaseLetters);
+      characters.push(lowercaseLetters);
     }
 
     //if user hits OK, add uppercaseLetters to character array
-    if (onfirm("Click OK to confirm including uppercase letters")) {
-      characters.concat(uppercaseLetters);
+    if (confirm("Click OK to confirm including uppercase letters")) {
+      characters.push(uppercaseLetters);
     }
 
     //for loop for generating password
@@ -74,6 +74,7 @@ for (var i = 0; i < numberOfCharacters; i++) {
 }
 
 return password;
+console.log(password);
 
 }
 
