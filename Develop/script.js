@@ -14,14 +14,17 @@ var generateBtn = document.querySelector("#generate");
 //List of Arrays
 var uppercaseLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
-var lowecaseLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var lowercaseLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
 var numbers = [0,1,2,3,4,5,6,7,8,9];
 
 var symbols = ['!', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '[','{', ']', '}', '|', ';', ':', '<', ',', '>', '.', '?', '~', '`'];
 
-//all conditions array
-var characters = [uppercaseLetters, lowecaseLetters, numbers, symbols];
+//all true conditions array
+var characters = [];
+
+//empty array for the password
+// var password = [];
 
 
 // When Generate Password button is clicked, the first prompt should appear. 
@@ -40,18 +43,49 @@ function startPrompt(){
   }
   
   //Confirm including special characters
-  var specialCharacters = confirm("Click OK to confirm including special chaacters");
+  var specialCharacters = confirm("Click OK to confirm including special characters");
+
+    //if user hits OK, add symbols array to characters array
+    if (specialCharacters == true) {
+      characters.concat(symbols);
+    }
 
   //Confirm including numeric characters
   var numericCharacters = confirm("Click OK to confirm including numeric characters");
 
+    //if user hits OK, add numbers to characters array
+    if (numericCharacters == true) {
+      characters.concat(numbers);
+    }
+
   //Confirm including lowercase characters
   var lowercaseCharacters = confirm("Click OK to confirm including lowercase letters");
+
+    //if user hits OK, add lowecaseLetters to character array
+    if (lowercaseCharacters == true) {
+      characters.concat(lowercaseLetters);
+    }
 
   //Confirm including uppercase characters
   var uppercaseCharacters = confirm("Click OK to confirm including uppercase letters");
 
+    //if user hits OK, add uppercaseLetters to character array
+    if (uppercaseCharacters == true) {
+      characters.concat(uppercaseLetters);
+    }
+
+    //for loop for generating password
+for (var i = 0; i < numberOfCharacters; i++) {
+
+  var password = characters[Math.floor(Math.random() * characters.length)];
+
+  console.log(password);
+
 }
+
+}
+
+
 
 // // Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
