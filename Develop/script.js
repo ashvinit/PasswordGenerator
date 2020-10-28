@@ -7,6 +7,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+  
 }
 
 //start when button is clicked
@@ -25,13 +26,6 @@ var symbols = ['!', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', 
 //all true conditions array
 var characters = [];
 
-//empty array for the password
-var password = [];
-
-
-// // When Generate Password button is clicked, the first prompt should appear. 
-// function startPrompt(){
-
   //Ask user how many characters they would like their passowrd to contain
   var numberOfCharacters = prompt("How many characters would you like your password to contain? (Password must be 8 - 128 characters long)");
 
@@ -44,6 +38,7 @@ var password = [];
         numberOfCharacters = prompt("How many characters would you like your password to contain? (Password must be 8 - 128 characters long)");
 
         writePassword();
+
   }
   
     //if user hits OK, add symbols array to characters array
@@ -67,16 +62,17 @@ var password = [];
     }
 
     //for loop for generating password
-for (var i = 0; i < numberOfCharacters; i++) {
+for (var i = 0; i < numberOfCharacters; i++ ) {
+    var randomArray = characters[Math.floor(Math.random() * characters.length)];
+    password += randomArray[Math.floor(Math.random())];
+    // console.log(password);
 
-  password += characters[Math.floor(Math.random() * characters.length)];
+  }
 
-}
 
-return password;
-console.log(password);
-
+  return password;
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
