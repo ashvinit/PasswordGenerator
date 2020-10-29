@@ -28,6 +28,7 @@ var characters = [];
   //Ask user how many characters they would like their passowrd to contain
   var numberOfCharacters = prompt("How many characters would you like your password to contain? (Password must be 8 - 128 characters long)");
 
+
   //check to see if answer meets condition; if not it will repeat the question
       while (numberOfCharacters < 8 || numberOfCharacters > 128) { 
         
@@ -35,8 +36,6 @@ var characters = [];
         alert("PASSWORD MUST BE 8-128 CHARACTERS LONG!");
         
         numberOfCharacters = prompt("How many characters would you like your password to contain? (Password must be 8 - 128 characters long)");
-
-        writePassword();
 
   }
   
