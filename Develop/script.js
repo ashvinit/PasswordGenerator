@@ -3,6 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
@@ -11,8 +12,7 @@ function writePassword() {
 
 //start when button is clicked
 function generatePassword () {
-
-
+  
 //List of Arrays
 var uppercaseLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
@@ -33,9 +33,11 @@ var characters = [];
       while (numberOfCharacters < 8 || numberOfCharacters > 128) { 
         
         //alert the user the condition and ask the prompt again
-        alert("PASSWORD MUST BE 8-128 CHARACTERS LONG!");
+        alert("PLEASE ENTER A NUMBER BETWEEN 8 & 128!");
         
         numberOfCharacters = prompt("How many characters would you like your password to contain? (Password must be 8 - 128 characters long)");
+
+        
 
   }
   
