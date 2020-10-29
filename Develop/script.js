@@ -60,6 +60,7 @@ var characters = [];
       characters.push(uppercaseLetters);
     }
 
+    let password = [];
     //for loop for generating password
 for (var i = 0; i < numberOfCharacters; i++ ) {
     var randomArray = characters[Math.floor(Math.random() * characters.length)];
