@@ -1,6 +1,11 @@
-# passwordGenerator
 
-This application was created to generate a strong random password.
+# Password Generator ![License: None](https://img.shields.io/static/v1?label=License&message=None&color=ff69b4)
+
+
+## Description
+
+This application allows users to generate a unique password. The user can choose the length of the password and the strength of the password by choosing appropriate answers to prompts and confirmations from the window. 
+
 
 ![Homepage](/Assets/images/img1.png)
 
@@ -25,3 +30,33 @@ In order to get this website to function:
 * Finally I needed a for loop to first choose a random array (from the conditions the user chose), then from that array, choose a random charcter. This would repeat according to the length of the password the user wanted.
 
 ![for loop](Assets/images/img6.png)
+
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Tests](#tests)
+* [Questions](#questions)
+
+
+## Installation
+
+The command that should be run to install dependencies is: 
+No dependencies required.
+
+
+## Tests
+
+Open index.html in the browser.
+
+
+## Questions
+
+If you have any further questions regarding this project, please feel free to contact.
+
+GitHub Username: ashvinit
+Email Address: ashvinithomas@gmail.com
+
+
+
+
