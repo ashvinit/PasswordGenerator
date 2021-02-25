@@ -1,7 +1,7 @@
 
 # Password Generator
 
-    [View Deployed App] (https://ashvinit.github.io/passwordGenerator/)
+    [View Deployed App](https://ashvinit.github.io/passwordGenerator/)
 
 ## Description
 
