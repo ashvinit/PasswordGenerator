@@ -1,10 +1,7 @@
 
-# Password Generator ![License: None](https://img.shields.io/static/v1?label=License&message=None&color=ff69b4)
+# Password Generator
 
-## Deployed Link
-
-    https://ashvinit.github.io/passwordGenerator/
-
+    [View Deployed App] (https://ashvinit.github.io/passwordGenerator/)
 
 ## Description
 
